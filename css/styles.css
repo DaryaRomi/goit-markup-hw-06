@@ -778,3 +778,25 @@ body{
     line-height: 1.5;
     letter-spacing: 0.04em;
 }
+
+/* -----------------------Tablet-------------------------------- */
+
+@media screen and (min-width: 768px) {
+    .modal {
+        width: 408px;
+        min-height: 584px;
+        padding: 72px 25px 24px 23px;
+    }
+
+    .review-form-own-checkbox {
+        margin-top: 16px;
+    }
+}
+
+/* -------------------------Desktop-------------------------------- */
+
+@media screen and (min-width: 1158px) {
+    .modal {
+        padding: 72px 24px 24px 24px;
+    }
+}
