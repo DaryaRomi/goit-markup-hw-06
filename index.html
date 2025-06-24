@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Studio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="headercontainer">
+      <nav class="nav_header">
+        <a href="#" class="headerlogo">Web<span class="spanclass">Studio</span></a>
+        <ul class="headerlist">
+          <li><a href="#">Studio</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+        <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" aria-label="Close menu">&times;</button>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="#">Studio</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Responsive Image -->
+  <section>
+    <h2>Our Team</h2>
+    <img src="images/team-1@1x.jpg"
+         srcset="images/team-1@1x.jpg 1x, images/team-1@2x.jpg 2x"
+         alt="Team Member" width="300">
+  </section>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.querySelector('.close-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('is-open');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.remove('is-open');
+    });
+  </script>
+</body>
+</html>
